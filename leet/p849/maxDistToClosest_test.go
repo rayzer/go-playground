@@ -20,7 +20,6 @@ func maxDistToClosest(seats []int) int {
 				after++
 			}
 
-			log.Println("before", before, "after", after)
 			var left, right int
 			if before == -1 {
 				left = numberOfSeats
@@ -33,11 +32,10 @@ func maxDistToClosest(seats []int) int {
 			} else {
 				right = after - i
 			}
-			log.Println("i", i, "left:", left, "right:", right)
+			log.Println("position:", i, "left:", left, "right:", right)
 			anwser = max(anwser, min(left, right))
 		}
 	}
-	log.Println(anwser)
 	return anwser
 }
 
