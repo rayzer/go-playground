@@ -11,10 +11,11 @@ func main() {
 	// i == 1
 	fmt.Printf("%T %#v\n", i, i)
 
-	//b := [2]string{"Penn", "Teller"}
-	// b := [...]string{"Penn", "Teller"}
+	// b := [2]string{"Penn", "Teller"}
+	// b := [...]string{"Penn", "Teller"}{}
 
-	//letters := []string{"a", "b", "c", "d"}
+	letters := []string{"a", "b", "c", "d"}
+	fmt.Printf("%T\n", letters)
 
 	//var s []byte
 	//s = make([]byte, 5, 5)
@@ -29,8 +30,8 @@ func main() {
 	// b[2:] == []byte{'l', 'a', 'n', 'g'}
 	// b[:] == b
 
-	//x := [3]string{"Лайка", "Белка", "Стрелка"}
-	//t := x[:]
+	// x := [3]string{"Лайка", "Белка", "Стрелка"}
+	// t := x[:]
 
 	d := []byte{'r', 'o', 'a', 'd'}
 
@@ -44,8 +45,10 @@ func main() {
 	fmt.Printf("e: %#v, %v\n", e, e)
 	fmt.Printf("d: %#v, %v\n", d, d)
 
-	s = s[2:4]
-	s = s[:cap(s)]
+	// s = s[2:4]
+	// fmt.Printf("s: %#v, %v\n", s, s) //  0 0
+	// s = s[:cap(s)] //cap:3 // 0 0 0
+	// fmt.Printf("s: %#v, %v\n", s, s)
 
 	//Double s capacity
 
@@ -72,7 +75,7 @@ func main() {
 	printMyslices(ad)
 	bd := []string{"George", "Ringo", "Pete"}
 	printMyslices(bd)
-	ad = append(ad, ad...) // equivalent to "append(a, b[0], b[1], b[2])"
+	ad = append(ad, bd...) // equivalent to "append(a, b[0], b[1], b[2])"
 	// a == []string{"John", "Paul", "George", "Ringo", "Pete"}
 	printMyslices(ad)
 }
