@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(s1) // [1 22 23]
 	fmt.Println(s2) // [22 23]
 
-	s2 = append(s2, 4) // 向容量为 2 的 s2 中再追加元素，此时将分配新数组来存
+	s2 = append(s2, 4) // 向容量为 2 的 s2 中再追加元素，此时将分配新数组来存 **********
 
 	for i := range s2 {
 		s2[i] += 10

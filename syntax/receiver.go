@@ -11,7 +11,7 @@ type printer interface {
 }
 
 func (p *data) print() {
-	fmt.Println("name: ", p.name)
+	fmt.Println("namep: ", p.name)
 }
 
 func main() {

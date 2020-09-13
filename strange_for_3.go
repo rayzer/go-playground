@@ -14,26 +14,26 @@ func (p *field) print() {
 }
 
 // 错误示例
-// func main() {
-// 	data := []field{{"one"}, {"two"}, {"three"}}
-// 	for _, v := range data {
-// 		go v.print()
-// 	}
-// 	time.Sleep(3 * time.Second)
-// 	// 输出 three three three
-// }
-
-// 正确示例
 func main() {
 	data := []field{{"one"}, {"two"}, {"three"}}
 	for _, v := range data {
-		v := v
-
 		go v.print()
 	}
 	time.Sleep(3 * time.Second)
-	// 输出 one two three
+	// 输出 three three three
 }
+
+// 正确示例
+// func main() {
+// 	data := []field{{"one"}, {"two"}, {"three"}}
+// 	for _, v := range data {
+// 		v := v
+
+// 		go v.print()
+// 	}
+// 	time.Sleep(3 * time.Second)
+// 	// 输出 one two three
+// }
 
 // 正确示例
 // func main() {
