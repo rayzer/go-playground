@@ -24,4 +24,10 @@ func main() {
 	}
 	fmt.Println(s1) // [1 22 23]	// 此时的 s1 不再更新，为旧数据
 	fmt.Println(s2) // [32 33 14]
+
+	var solutions [][][2]int
+	solutions = append(solutions, [][2]int{{0, 0}, {1, 1}})
+	solutions = append(solutions, [][2]int{{2, 2}, {3, 3}})
+	fmt.Printf("%#v\n", solutions)
+	fmt.Println(solutions)
 }

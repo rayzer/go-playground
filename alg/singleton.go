@@ -12,6 +12,7 @@ type instance struct {
 var (
 	once sync.Once
 	i    *instance
+	s    *sman
 )
 
 func new() *instance {
@@ -29,4 +30,17 @@ func main() {
 	s2 := new()
 	s2.Values["al"] = "ar2"
 	fmt.Printf("%v : %v ", "al", s2.Values["al"])
+}
+
+type sman struct {
+	value string
+}
+
+func newInstance() *sman {
+	once.Do(func() {
+		s = &sman{
+			value: "ray",
+		}
+	})
+	return s
 }

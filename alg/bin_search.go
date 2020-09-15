@@ -1,9 +1,11 @@
-func binsearch(a *[]int, len int, targetValue int) int {
+package main
+
+func binsearch(a []int, len int, targetValue int) int {
 	low := 0
 	high := len - 1
 
 	for low <= high {
-		mid = low + (high-low)/2
+		mid := low + (high-low)/2
 		if a[mid] == targetValue {
 			return mid
 		} else if a[mid] < targetValue {
