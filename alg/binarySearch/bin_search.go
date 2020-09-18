@@ -1,4 +1,4 @@
-package main
+package binarySearch
 
 func binsearch(a []int, len int, targetValue int) int {
 	low := 0

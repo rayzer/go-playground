@@ -22,13 +22,12 @@ func qSort_c(data []int, p int, r int) {
 	if p >= r {
 		return
 	}
-
-	pivot := partition(data, p, r)
+	pivot := partiton(data, p, r)
 	qSort_c(data, p, pivot-1)
 	qSort_c(data, pivot+1, r)
 }
 
-func partition(data []int, p int, r int) int {
+func partiton(data []int, p int, r int) int {
 	pivot := data[r]
 	i := p
 	for j := p; j < r-1; j++ {
@@ -40,6 +39,33 @@ func partition(data []int, p int, r int) int {
 	data[i], data[r] = data[r], data[i]
 	return i
 }
+
+//func qSort(data []int) {
+//	qSort_c(data, 0, len(data)-1)
+//}
+//
+//func qSort_c(data []int, p int, r int) {
+//	if p >= r {
+//		return
+//	}
+//
+//	pivot := partition(data, p, r)
+//	qSort_c(data, p, pivot-1)
+//	qSort_c(data, pivot+1, r)
+//}
+//
+//func partition(data []int, p int, r int) int {
+//	pivot := data[r]
+//	i := p
+//	for j := p; j < r-1; j++ {
+//		if data[j] < pivot {
+//			data[i], data[j] = data[j], data[i]
+//			i++
+//		}
+//	}
+//	data[i], data[r] = data[r], data[i]
+//	return i
+//}
 
 //func qSort(data []int) {
 //	qSort_c(data, 0, len(data)-1)

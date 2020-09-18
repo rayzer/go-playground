@@ -30,4 +30,8 @@ func main() {
 	solutions = append(solutions, [][2]int{{2, 2}, {3, 3}})
 	fmt.Printf("%#v\n", solutions)
 	fmt.Println(solutions)
+
+	//auto calc array lenth
+	storage := [...]string{"a", "b", "c"}
+	fmt.Printf("%#v\n", storage)
 }

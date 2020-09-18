@@ -1,4 +1,4 @@
-package main
+package linkedList
 
 type Element struct {
 	next *Element
@@ -20,7 +20,7 @@ type linkedList struct {
 	len  int
 }
 
-func (l *linkedList) init() *List {
+func (l *linkedList) init() *linkedList {
 	l.root.next = &l.root
 	l.len = 0
 	return l

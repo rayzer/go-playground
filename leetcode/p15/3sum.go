@@ -24,6 +24,7 @@ func threeSum(nums []int) [][]int {
 			} else {
 				resultSet = append(resultSet, []int{v, nums[l], nums[r]})
 				l++
+				//skip duplicate numbers
 				for nums[l] == nums[l-1] && l < r {
 					l++
 				}

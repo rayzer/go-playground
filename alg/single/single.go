@@ -1,7 +1,7 @@
 package single
 
 var (
-	singleman = getSingleMan()
+	singleMan = getSingleMan()
 )
 
 func getSingleMan() string {

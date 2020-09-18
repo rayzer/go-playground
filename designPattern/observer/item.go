@@ -1,11 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"container/list"
+	"fmt"
+)
 
 type item struct {
-	observerList []observer
-	name         string
-	inStock      bool
+	observerList  []observer
+	observerList2 *list.List
+	name          string
+	inStock       bool
 }
 
 func newItem(name string) *item {
@@ -22,6 +26,7 @@ func (i *item) updateAvailability() {
 
 func (i *item) register(o observer) {
 	i.observerList = append(i.observerList, o)
+	//i.observerList2.PushBack(o)
 }
 
 func (i *item) deregister(o observer) {

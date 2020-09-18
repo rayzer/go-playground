@@ -1,5 +1,6 @@
 package p92
 
+//https://leetcode.com/problems/reverse-linked-list-ii/
 /**
  * Definition for singly-linked list.
  * type ListNode struct {
@@ -29,7 +30,7 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	startPoint := prev
 	tail := cur
 
-	for j := 1; j < (n-m)+2; j++ {
+	for j := 0; j < (n-m)+1; j++ {
 		tmp := cur.Next
 		cur.Next = prev
 		prev = cur

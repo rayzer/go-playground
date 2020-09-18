@@ -6,6 +6,7 @@ func main() {
 	naturals := make(chan int)
 	squares := make(chan int)
 
+	//不停往 natuals 刷x
 	go func() {
 		for x := 0; ; x++ {
 			naturals <- x
@@ -13,6 +14,7 @@ func main() {
 		close(naturals)
 	}()
 
+	//不停取出
 	go func() {
 		for {
 			x, ok := <-naturals
