@@ -10,7 +10,7 @@ import (
  *
  * [16] 3Sum Closest
  */
-
+//遍历求最小差
 // @lc code=start
 func threeSumClosest(nums []int, target int) int {
 	sort.Ints(nums)
