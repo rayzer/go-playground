@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
  * @lc app=leetcode id=70 lang=golang
  *
@@ -22,6 +24,7 @@ package main
 // 	}
 // 	return climbStairs(n-1) + climbStairs(n-2)
 // }
+
 func climbStairs(n int) int {
 	if n == 1 {
 		return 1
@@ -40,3 +43,7 @@ func climbStairs(n int) int {
 }
 
 // @lc code=end
+
+func main() {
+	fmt.Println(climbStairs(10))
+}

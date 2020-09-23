@@ -13,15 +13,17 @@ import "fmt"
 func isValid(s string) bool {
 	ordered := []byte(s)
 	stack := []byte{}
+	mapping := map[byte]byte{']': '[', '}': '{', ')': '('}
 	for i := 0; i < len(ordered); i++ {
 		t := ordered[i]
 		if t == '[' || t == '{' || t == '(' {
 			stack = append(stack, t)
-		} else if len(stack) == 0 {
-			return false
 		} else {
+			if len(stack) == 0 {
+				return false
+			}
 			p := stack[len(stack)-1]
-			if getLeftParentheses(t) == p {
+			if mapping[t] == p {
 				stack = stack[:len(stack)-1]
 			} else {
 				return false
@@ -29,19 +31,6 @@ func isValid(s string) bool {
 		}
 	}
 	return len(stack) == 0
-}
-
-func getLeftParentheses(t byte) byte {
-	if t == ']' {
-		return '['
-	}
-	if t == '}' {
-		return '{'
-	}
-	if t == ')' {
-		return '('
-	}
-	return ' '
 }
 
 // @lc code=end
