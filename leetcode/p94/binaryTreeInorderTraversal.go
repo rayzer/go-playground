@@ -50,11 +50,13 @@ func inorderTraversal(root *TreeNode) []int {
 			stack = append(stack, root)
 			root = root.Left
 		}
+
+		//pop one and check
 		root = stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
-
 		result = append(result, root.Val)
 
+		//move right if available
 		root = root.Right
 	}
 	return result
