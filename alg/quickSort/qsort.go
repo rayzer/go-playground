@@ -22,12 +22,12 @@ func qSort_c(data []int, p int, r int) {
 	if p >= r {
 		return
 	}
-	pivot := partiton(data, p, r)
+	pivot := partition(data, p, r)
 	qSort_c(data, p, pivot-1)
 	qSort_c(data, pivot+1, r)
 }
 
-func partiton(data []int, p int, r int) int {
+func partition(data []int, p int, r int) int {
 	pivot := data[r]
 	i := p
 	for j := p; j < r-1; j++ {

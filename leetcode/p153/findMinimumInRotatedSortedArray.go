@@ -15,6 +15,7 @@ func findMin(nums []int) int {
 	left, right := 0, len(nums)-1
 	for left < right {
 		mid := left + (right-left)/2
+		fmt.Println(left, mid, right)
 		if nums[mid] < nums[right] {
 			//右半有序，排除
 			right = mid
