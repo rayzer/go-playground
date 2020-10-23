@@ -1,12 +1,15 @@
 # A Simple ConsistentHash example
 
-A quick implementation of vnode consistent hash for study load balancing.
-Trying different hash algorithm to see their performance when vnode number increases:
+A quick implementation of vnode consistent hash for load balancing.
+
+Trying different hash algorithms:
 - crc32 hash come along golang
 - [Murmur3](github.com/spaolacci/murmur3)
 - [Google FarmHash](https://github.com/dgryski/go-farm)
 
-Note: Only tried with the simplest usage of these libraries. Result could be quite different if tuning the algorithm options.
+To see their performance when vnode number increases.
+
+Note: Only with the simplest usage of these libraries. Result could be quite different if tuning the algorithm options.
 
 #### Tests
 
