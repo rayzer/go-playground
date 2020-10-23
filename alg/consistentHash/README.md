@@ -8,14 +8,14 @@ Trying different hash algorithm to see their performance when vnode number incre
 
 Note: Only tried with the simplest usage of these libraries. Result could be quite different if tuning the algorithm options.
 
-####Tests
+#### Tests
 
 1. Add 3 actual servers
 2. vnodes multiply from 5 to 500, each time add 5
 3. Using 8 * 10000 data to see how they are distributed to actual servers
 4. Check the distribution standard deviation
 
-####Result
+#### Result
 
 * crc32 get its smallest stdev when there is around 320 vnodes for each actual server.
 * murmur3 get small stdev quickly when there is around 100 vnodes for each actual server.
@@ -23,17 +23,17 @@ Note: Only tried with the simplest usage of these libraries. Result could be qui
 
 crc32
 
-![crc32](resources/crc32.png){width="50%"}
+<img width="70%" src="resources/crc32.png"/>
 
 Murmur3
 
-![murmur3](resources/murmur3.png){width="50%"}
+<img width="70%" src="resources/murmur3.png"/>
 
 Google Farm
 
-![farm](resources/farm.png){width="50%"}
+<img width="70%" src="resources/farm.png"/>
 
-####More can be done
+#### What's more can be done
 * What is there is more actual servers, for example, 1000 actual servers? 
 * What are other promising hash algorithms?
 * Could the data used for hash impact the result?
